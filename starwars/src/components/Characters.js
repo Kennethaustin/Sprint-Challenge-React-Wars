@@ -1,10 +1,14 @@
 import React from "react";
+import './StarWars.css';
 
-
-export default function Characters({name}) {
+export default function Characters({name,homeworld,films}) {
     return (
         <div className = "Characters">
-            <h3>{name}</h3>
+           <div className="card-text">
+                <h1>{name}</h1>
+            <section> home <a href={homeworld}>{homeworld}</a> </section>
+            <p>{films.forEach(film =>{return {film}})} </p>
         </div> 
-    )
+            </div>
+    );
 }
